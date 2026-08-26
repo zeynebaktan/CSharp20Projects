@@ -1,0 +1,10 @@
+﻿Create Table Categories(
+CategoryId serial primary key,
+CategoryName varchar(100) not null
+
+Alter Table todolists
+Add Column Description varchar(1000),
+Add Column status bit,
+Add Column priority varchar(50),
+Add Column CategoryId int,
+Add Constraint FK_ToDoLists_Categories Foreign Key (CategoryId) references Categories(CategoryId) On Delete Cascade;

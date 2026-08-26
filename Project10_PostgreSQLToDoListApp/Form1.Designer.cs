@@ -48,6 +48,9 @@
             this.btnCheckedList = new System.Windows.Forms.Button();
             this.btnCountunieList = new System.Windows.Forms.Button();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.btnCategoryList = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,6 +82,7 @@
             this.btnList.TabIndex = 3;
             this.btnList.Text = "Listele";
             this.btnList.UseVisualStyleBackColor = false;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // txtTitle
             // 
@@ -192,6 +196,7 @@
             this.btnCreate.TabIndex = 16;
             this.btnCreate.Text = "Oluştur";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnDelete
             // 
@@ -203,6 +208,7 @@
             this.btnDelete.TabIndex = 17;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -214,6 +220,7 @@
             this.btnUpdate.TabIndex = 18;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAllList
             // 
@@ -223,8 +230,9 @@
             this.btnAllList.Name = "btnAllList";
             this.btnAllList.Size = new System.Drawing.Size(227, 38);
             this.btnAllList.TabIndex = 19;
-            this.btnAllList.Text = "Tüm Liste";
+            this.btnAllList.Text = "Tüm Liste (Kategori)";
             this.btnAllList.UseVisualStyleBackColor = false;
+            this.btnAllList.Click += new System.EventHandler(this.btnAllList_Click);
             // 
             // btnCheckedList
             // 
@@ -236,6 +244,7 @@
             this.btnCheckedList.TabIndex = 20;
             this.btnCheckedList.Text = "Tamamlananlar";
             this.btnCheckedList.UseVisualStyleBackColor = false;
+            this.btnCheckedList.Click += new System.EventHandler(this.btnCheckedList_Click);
             // 
             // btnCountunieList
             // 
@@ -247,6 +256,7 @@
             this.btnCountunieList.TabIndex = 21;
             this.btnCountunieList.Text = "Devam Edenler";
             this.btnCountunieList.UseVisualStyleBackColor = false;
+            this.btnCountunieList.Click += new System.EventHandler(this.btnCountunieList_Click);
             // 
             // cmbCategory
             // 
@@ -258,12 +268,37 @@
             this.cmbCategory.Size = new System.Drawing.Size(229, 30);
             this.cmbCategory.TabIndex = 22;
             // 
+            // btnCategoryList
+            // 
+            this.btnCategoryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnCategoryList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCategoryList.Location = new System.Drawing.Point(358, 319);
+            this.btnCategoryList.Name = "btnCategoryList";
+            this.btnCategoryList.Size = new System.Drawing.Size(227, 38);
+            this.btnCategoryList.TabIndex = 23;
+            this.btnCategoryList.Text = "Kategori Listesi";
+            this.btnCategoryList.UseVisualStyleBackColor = false;
+            this.btnCategoryList.Click += new System.EventHandler(this.btnCategoryList_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(591, 15);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(884, 342);
+            this.dataGridView1.TabIndex = 24;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(226)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(618, 369);
+            this.ClientSize = new System.Drawing.Size(1487, 369);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnCategoryList);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.btnCountunieList);
             this.Controls.Add(this.btnCheckedList);
@@ -286,6 +321,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Yapılacak Listesi / To Do List";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,6 +350,8 @@
         private System.Windows.Forms.Button btnCheckedList;
         private System.Windows.Forms.Button btnCountunieList;
         private System.Windows.Forms.ComboBox cmbCategory;
+        private System.Windows.Forms.Button btnCategoryList;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
